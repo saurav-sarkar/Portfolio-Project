@@ -60,7 +60,7 @@ WHERE continent is not null
 GROUP BY continent
 ORDER BY  TotalDeathCount desc
 
---GLOBAL NUMBERS
+--GLOBAL NUMBERS OF COVID 
 
 SELECT SUM(new_cases)as Total_cases,SUM(CAST(new_deaths as int))as Total_deaths, 
 SUM(CAST(new_deaths as int)) / SUM(new_cases)*100 as DeathPercentage
@@ -127,7 +127,7 @@ where dea.continent is not null
 Select *, (RollingPeopleVaccinated/Population)*100
 From #PercentPopulationVaccinated
 
---CREATING VIEW TO STORE DATA FOR LATER VISULIZATION
+--CREATING VIEW TO STORE DATA FOR DATA VISULIZATION
 
 Create View PercentPopulationVaccinate as
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations

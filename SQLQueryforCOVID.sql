@@ -139,3 +139,6 @@ Join projects..CovidVaccination$ vac
 	and dea.date = vac.date
 where dea.continent is not null 
 --order by 2,3
+
+
+--Link for dataset: https://ourworldindata.org/covid-deaths
